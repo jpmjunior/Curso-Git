@@ -1,0 +1,65 @@
+# Comandos Git úteis #
+#
+# Autor: Pinheiro Júnior
+
+git config --global user.name "José"
+	Altera nome de usuário para "José".
+
+git config --global user.email "jr@email.com"
+	Altera e-mail do usuário para "jr@email.com".
+
+git config core.editor "<caminho para o editor>"
+	Altera o editor padrão.
+
+git init
+	Inicializa um repositório git local.
+
+git add . ou <nome do arquivo>
+	Adiciona todos ou um aquivo específico ao repositório local.
+
+git commit -m "Mensagem de commit!"
+	Cria um ponto de restauração e adiciona uma mensagem.
+
+git commit -am "Mensagem de commit!"
+	Adiciona ao repositório e cria um ponto de restauração.
+
+git diff
+	Exibe as diferenças entre a versão atual do projeto e a versão do repositório local.
+
+git checkout <arquivo> | git restore <arquivo>
+	Desfaz alterações do projeto para corresponder a versão do repositório local.
+
+git reset HEAD <arquivo> | git restore --staged <arquivo>
+	Remove arquivo do stage, área onde as alterações vão para o próximo commit.
+
+git reset HEAD~1 | git reset master~1
+	Retorna repositório local ao penúltimo commit (HEAD~1), mas não altera arquivos do projeto.
+
+git reset --hard HEAD~1 | git reset --hard <hash>
+	Retorna ao commit informado. 
+	--hard = Desfaz alterações tanto no repositório quanto no projeto.
+	HEAD~1 = Penúltimo commit.
+
+git revert <hash>
+	Desfaz alterações de commit informado.
+
+git checkout <hash>
+	Direciona o projeto para o ponto espeficado através do hash do commit.
+
+git checkout <branch>
+	Retorna ao último commit do branch informado, ex: "master".
+
+git branch
+	Exibe todas as branchs do projeto.
+
+git branch <new branch>
+	Cria uma nova branch no projeto.
+
+git checkout -b <new branch>
+	Cria uma nova branch e já altera o projeto para nova branch.
+
+git push origin master
+	Envia dados do branch "master" do repositório local ao repositório remoto "origin".
+
+git pull
+	Baixa arquivos do repositório remoto para o repositório local.
