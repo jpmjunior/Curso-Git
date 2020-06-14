@@ -10,6 +10,9 @@ git config --global user.email "jr@email.com"
 
 git config core.editor "<caminho para o editor>"
 	Altera o editor padrão.
+	
+git config --global core.autocrlf true
+	Converte terminação para CRLF automaticamente ai fazer checkout.
 
 git init
 	Inicializa um repositório git local.
